@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-01-21 07:30:54",
+  "drift_score": 0.3186,
+  "threshold": 0.3,
+  "status": "DRIFT_DETECTED",
+  "action": "TRIGGER_RETRAINING"
+}
