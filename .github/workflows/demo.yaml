@@ -1,18 +1,38 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+name: GitHub Actions Demo - Subtraction Calculator
+run-name: ${{ github.actor }} is testing subtraction 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Subtraction-Calculator:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      
       - name: Check out repository code
         uses: actions/checkout@v5
+      
       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
+      
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      
+      - name: Perform Subtraction ➖
+        run: |
+          echo "🧮 Performing subtraction operation..."
+          NUM1=100
+          NUM2=42
+          RESULT=$((NUM1 - NUM2))
+          echo "📊 Calculation: $NUM1 - $NUM2 = $RESULT"
+          echo "✅ Subtraction completed successfully!"
+      
+      - name: Advanced Subtraction Examples
+        run: |
+          echo "📐 More subtraction examples:"
+          echo "1000 - 250 = $((1000 - 250))"
+          echo "500 - 75 = $((500 - 75))"
+          echo "999 - 111 = $((999 - 111))"
+      
       - run: echo "🍏 This job's status is ${{ job.status }}."
